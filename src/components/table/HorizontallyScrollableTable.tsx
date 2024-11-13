@@ -223,15 +223,6 @@ export const HorizontallyScrollableTable: FC<ITable> = forwardRef(
                 </STh>
               );
             })}
-             <STh
-                  key={"lol"}
-                  id={"lol"}
-                  style={{
-                    ...columns[columns.length - 1].style
-                  }}
-                >
-                  {"lol"}
-                </STh>
           </STr>
         </SThead>
         <STbody>
