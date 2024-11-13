@@ -118,6 +118,7 @@ function TableDemo() {
         globalFilter={globalFilter}
         dataSource={dataSource}
         columns={columns}
+        isHorizontallyScrollable={true}
       />
     </div>
   );
