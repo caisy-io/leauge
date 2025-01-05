@@ -21,7 +21,7 @@ const StatefulPoppable: React.FC<any> = forwardRef((props, ref) => {
     const [placement, setPlacement] = useState();
 
     return (
-        <Poppable {...props} placement={placement} onPlacement={setPlacement} ref={ref}/>
+        <Poppable {...props} placement={placement} onPlacement={setPlacement as (() => void)} ref={ref}/>
     );
 });
  
