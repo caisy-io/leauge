@@ -16,12 +16,13 @@
 
 import React, {useState, memo, forwardRef} from 'react';
 import Poppable from './Poppable';
+const AnyPoppable = Poppable as any;
 
 const StatefulPoppable: React.FC<any> = forwardRef((props, ref) => {
     const [placement, setPlacement] = useState();
-
+    
     return (
-        <Poppable {...props} placement={placement} onPlacement={setPlacement as (() => void)} ref={ref}/>
+        <AnyPoppable {...props} placement={placement} onPlacement={setPlacement} ref={ref}/>
     );
 });
  
