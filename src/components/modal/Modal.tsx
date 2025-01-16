@@ -12,6 +12,7 @@ interface IModal {
   onClose?: (payload: any) => any;
   styleOverwrite?: ThemedCssFunction<any>;
   children?: React.ReactNode;
+  stackableClassName?: string;
 }
 
 export const Modal: React.FC<IModal> = ({ styleOverwrite, ...props }) => {
@@ -24,7 +25,7 @@ export const Modal: React.FC<IModal> = ({ styleOverwrite, ...props }) => {
 
   return docBody && shouldRender
     ? createPortal(
-        <Stackable>
+        <Stackable className={props.stackableClassName}>
           <SModalContainer>
             <SModalBackground state={props.visible ? "in" : "out"} onClick={props?.onClose} />
             <SModal
