@@ -86,7 +86,7 @@ export const RegularTable: FC<ITable> = forwardRef(
           key={`row-${row.id}`}
         >
           {columns.map(({ key, renderItem }, keyIndex) => {
-            const header = document.getElementById(`header-${keyIndex}`);
+            const header = headerRef.current.querySelector(`#header-${keyIndex}`);
             const headerWidth = header?.offsetWidth || 0;
             const isLastCell = keyIndex === columns.length - 1;
 
