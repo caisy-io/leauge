@@ -22,15 +22,6 @@ export interface IMessage {
 }
 
 const Message: React.FC<IMessage> = (msgConfig: IMessage) => {
-  // const [exit, setExit] = useState(false);
-
-  // const handleCloseMessage = () => {
-  //   setExit(true);
-  //   setTimeout(() => {
-  //     msgContainer?.remove();
-  //   }, 350);
-  // };
-
   return (
     <NotificationSnackbar
       content={msgConfig.content}
@@ -74,7 +65,6 @@ const renderMessage = (children: any, config?: any, type?: EMessageType) => {
     return <Message {...msgConfig} />;
   });
 
- 
 };
 
 message.success = function MessageSuccess(children: any, config?: IMessageConfig) {
